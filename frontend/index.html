@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OptiChain AI</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>📦 OptiChain AI Dashboard</h1>
+<p id="status">🟢 System Stable</p>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Demand Prediction</h3>
+        <button onclick="getPrediction()">Predict</button>
+        <p id="prediction"></p>
+    </div>
+
+    <div class="card">
+        <h3>Route Optimization</h3>
+        <button onclick="getOptimization()">Optimize</button>
+        <p id="optimize"></p>
+    </div>
+
+    <div class="card">
+        <h3>System Alerts</h3>
+        <button onclick="getAlert()">Check</button>
+        <p id="alert"></p>
+    </div>
+
+    <div class="card">
+        <h3>Simulation</h3>
+        <button onclick="simulate()">Simulate Crisis</button>
+        <p id="simulation"></p>
+    </div>
+
+</div>
+
+<h3>📈 Demand Trend</h3>
+<canvas id="demandChart" width="500" height="250"></canvas>
+
+<h3>📊 Business Impact</h3>
+<p>💰 Cost Saved: 23%</p>
+<p>⏱ Delivery Time Reduced: 18%</p>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
