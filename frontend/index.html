@@ -1,53 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OptiChain AI</title>
+    <!-- Icons & Charts -->
+    <link rel="stylesheet" href="https://cloudflare.com">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cloudflare.com">
 </head>
-
 <body>
 
-<h1>📦 OptiChain AI Dashboard</h1>
-<p id="status">🟢 System Stable</p>
+<nav class="navbar">
+    <div class="logo">📦 OptiChain AI</div>
+    <div id="status">🟢 System Stable</div>
+</nav>
+
+<header>
+    <h1>Supply Chain Control Center</h1>
+    <p>Real-time AI-driven logistics oversight</p>
+</header>
+<div class="control-panel">
+    <input type="number" id="productInput" placeholder="Enter Product ID (e.g. 8)" />
+    <select id="regionInput">
+        <option value="north">North Region</option>
+        <option value="south">South Region</option>
+    </select>
+</div>
+
 
 <div class="container">
-
     <div class="card">
+        <i class="fas fa-chart-line icon"></i>
         <h3>Demand Prediction</h3>
         <button onclick="getPrediction()">Predict</button>
         <p id="prediction"></p>
     </div>
 
     <div class="card">
+        <i class="fas fa-route icon"></i>
         <h3>Route Optimization</h3>
         <button onclick="getOptimization()">Optimize</button>
         <p id="optimize"></p>
     </div>
 
     <div class="card">
+        <i class="fas fa-bell icon"></i>
         <h3>System Alerts</h3>
         <button onclick="getAlert()">Check</button>
         <p id="alert"></p>
     </div>
 
     <div class="card">
+        <i class="fas fa-biohazard icon"></i>
         <h3>Simulation</h3>
         <button onclick="simulate()">Simulate Crisis</button>
-        <p id="simulation"></p>
+        <div id="simulation-container">
+            <p id="simulation"></p>
+        </div>
     </div>
-
 </div>
 
-<h3>📈 Demand Trend</h3>
-<canvas id="demandChart" width="500" height="250"></canvas>
+<section class="data-section">
+    <div class="chart-container">
+        <h3>📈 Demand Trend</h3>
+        <canvas id="demandChart"></canvas>
+    </div>
 
-<h3>📊 Business Impact</h3>
-<p>💰 Cost Saved: 23%</p>
-<p>⏱ Delivery Time Reduced: 18%</p>
+    <div class="impact-card">
+    <h3>📊 Live System Metrics</h3>
+    <div class="stat">
+        <span class="label">Total Shipments:</span> 
+        <span class="value" id="shipmentCount">1,240</span>
+    </div>
+    <div class="stat">
+        <span class="label">Efficiency Gain:</span> 
+        <span class="value">+12.5%</span>
+    </div>
+</div>
+
+</section>
 
 <script src="dashboard.js"></script>
-
 </body>
 </html>
+<footer style="margin-top: 50px; padding: 20px; color: #64748b; font-size: 0.8rem; border-top: 1px solid #1e293b;">
+    Built with: <span style="color: #3b82f6;">Python (Flask)</span> • <span style="color: #3b82f6;">Machine Learning</span> • <span style="color: #3b82f6;">Chart.js</span> • <span style="color: #3b82f6;">CSS3</span>
+</footer>
+
