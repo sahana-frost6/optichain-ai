@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000"; 
+const API_URL = "https://optichain-backend-5fl7.onrender.com"; 
 
 // --- 1. CHART INITIALIZATION ---
 const ctx = document.getElementById('demandChart').getContext('2d');
