@@ -144,3 +144,5 @@ This is a scalable prototype demonstrating how predictive analytics and optimiza
 ## 👩‍💻 Team
 
 OptiChain AI Team
+## PR Practice
+Learning how pull requests work.
